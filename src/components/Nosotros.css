@@ -22,11 +22,37 @@
   align-items: start;
 }
 
+/* --- FORZAMOS LOS ESTILOS CON MAYOR ESPECIFICIDAD --- */
+.nosotros .section-label {
+  font-size: 2.4rem !important; /* 👈 Lo hacemos GIGANTE */
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important; /* Le bajo un poco el espaciado para que no ocupe tanto ancho */
+  color: var(--purple) !important;
+  font-weight: 800 !important; /* Lo hacemos más gordito */
+  display: block !important;
+  margin-bottom: 8px !important;
+}
+
+.nosotros .section-title {
+  font-family: var(--font-display) !important;
+  font-size: 1.5rem !important; /* 👈 Lo hacemos MUCHO más chico */
+  font-weight: 600 !important; /* Le bajamos un poco el grosor */
+  color: var(--black) !important;
+  line-height: 1.3 !important;
+  margin-bottom: 24px !important;
+}
+
+.nosotros .section-title span {
+  color: var(--purple) !important;
+}
+/* ---------------------------------------------------- */
 .nosotros__text {
   color: var(--text-muted);
   margin-bottom: 18px;
-  line-height: 1.75;
+  line-height: 1.8; /* Le damos un poco más de aire entre renglones */
   font-size: 1rem;
+  text-align: justify; /* Esto hace que el texto se alinee perfectamente a izquierda y derecha */
+  hyphens: auto; /* Ayuda a que las palabras se corten bien si es necesario */
 }
 
 .nosotros__stats {
@@ -49,14 +75,18 @@
   font-weight: 800;
   color: var(--purple);
   line-height: 1;
+  /* Centramos el contenido por si algún número es más chico */
+  display: flex; 
+  align-items: baseline; 
 }
 
 .stat-label {
-  font-size: 12px;
+  font-size: 13px; /* Subí un pixel el tamaño para mejor lectura */
   color: var(--text-muted);
   font-weight: 500;
-  max-width: 90px;
-  line-height: 1.3;
+  max-width: 110px; /* Aumenté el ancho máximo para que el texto respire */
+  line-height: 1.4;
+  margin-top: 4px; /* Un poco de separación con el número */
 }
 
 .nosotros__right {
@@ -78,17 +108,38 @@
 }
 
 .valor-card:hover {
-  border-color: var(--purple-light);
+  border-color: var(--purple-light); /* Asumo que tienes esta variable, si no usa var(--purple) */
   box-shadow: 0 6px 28px rgba(139,63,168,0.1);
   transform: translateX(4px);
 }
 
+/* --- ESTILOS PARA LOS ICONOS SVG --- */
 .valor-card__icon {
-  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
   flex-shrink: 0;
-  line-height: 1;
-  margin-top: 2px;
+  background-color: rgba(139, 63, 168, 0.08); /* Fondo violeta súper sutil */
+  border-radius: 12px;
+  color: var(--purple); /* Color del icono por defecto */
+  transition: all 0.3s ease; /* Transición suave para el color de fondo y el ícono */
 }
+
+/* Controlamos el tamaño exacto del SVG dentro del contenedor */
+.valor-card__icon svg {
+  width: 24px;
+  height: 24px;
+  stroke: currentColor; /* Hereda el color definido en el contenedor padre */
+}
+
+/* Efecto hover: Cuando pasas el mouse por la tarjeta, el contenedor del icono se rellena */
+.valor-card:hover .valor-card__icon {
+  background-color: var(--purple);
+  color: #ffffff; /* El icono pasa a ser blanco para contrastar */
+}
+/* ---------------------------------- */
 
 .valor-card__title {
   font-family: var(--font-display);
@@ -107,4 +158,7 @@
 @media (max-width: 900px) {
   .nosotros__grid { grid-template-columns: 1fr; gap: 48px; }
   .nosotros__stats { gap: 24px; }
+  
+  /* Ajuste para que el título no quede inmenso en el celular */
+  .section-title { font-size: 1.8rem; }
 }
