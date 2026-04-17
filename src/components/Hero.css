@@ -351,6 +351,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%; /* Aseguramos que ocupe todo el ancho para centrar bien las alertas */
   }
 
   .hero__actions {
@@ -388,15 +389,15 @@
   .hero__ring--1 { width: 180px; height: 180px; }
   .hero__ring--2 { width: 250px; height: 250px; }
   
-  /* Alertas centradas y ajustadas */
+  /* Alertas centradas sin transform para no chocar con la animación */
   .hero__alert {
     position: absolute;
-    width: 220px;
-    max-width: 80vw;
-    left: 50% !important;
-    right: auto !important;
-    transform: translateX(-50%);
-    padding: 10px 14px;
+    width: 240px; /* Le damos un ancho fijo para que el texto entre perfecto */
+    max-width: 85vw;
+    left: 0 !important;
+    right: 0 !important;
+    margin: 0 auto !important; /* Esto garantiza el centrado absoluto */
+    padding: 12px 14px;
     pointer-events: none;
     z-index: 100;
   }
