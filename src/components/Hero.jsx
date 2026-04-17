@@ -79,7 +79,7 @@ export default function Hero() {
           {activeAlert === 'tendencia' && (
             <div className="hero__alert hero__alert--blue">
               <span className="hero__alert-title">Tendencia</span>
-              <span className="hero__alert-text">Comportamientos que perduran en el tiempo.</span>
+              <span className="hero__alert-text">Comportamientos que perduran en&nbsp;el&nbsp;tiempo.</span>
             </div>
           )}
           
