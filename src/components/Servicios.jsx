@@ -5,6 +5,30 @@ const servicios = [
   {
     icon: (
       <svg className="icon-multimedios" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <polyline points="16 18 22 12 16 6"></polyline>
+        <polyline points="8 6 2 12 8 18"></polyline>
+      </svg>
+    ),
+    color: '#5BC8F5',
+    title: 'Desarrollo Web & Mobile',
+    desc: 'Desarrollamos aplicaciones escalables que optimizan procesos y conectan con tus usuarios. Desde sistemas de gestión a medida hasta tiendas online, garantizamos alto rendimiento y una experiencia fluida en cualquier dispositivo para potenciar el crecimiento de tu negocio.',
+    tags: ['Web Apps', 'Portafolios', 'Sistemas a Medida', 'Apps Móviles', 'E-commerce'],
+  },
+  {
+    icon: (
+      <svg className="icon-multimedios" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"></path>
+        <circle cx="12" cy="13" r="3"></circle>
+      </svg>
+    ),
+    color: '#8B3FA8',
+    title: 'Soluciones Digitales',
+    desc: 'No ofrecemos herramientas sueltas, desarrollamos soluciones que funcionan. Creamos ecosistemas digitales pensados para optimizar, escalar y posicionarte. Integramos tecnología, estrategia y experiencia de usuario para que cada desarrollo tenga un impacto real en tu crecimiento.',
+    tags: ['Estrategia Digital', 'Automatización', 'UX / UI', 'Integraciones', 'Consultoría'],
+  },
+  {
+    icon: (
+      <svg className="icon-multimedios" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
         <line x1="12" y1="18" x2="12.01" y2="18"></line>
         <path d="M12 2v2"></path>
@@ -26,7 +50,7 @@ const servicios = [
     ),
     color: '#8B3FA8',
     title: 'Publicidad Digital',
-    desc: 'Campañas pagadas en Meta Ads y Google Ads optimizadas para maximizar tu ROI y alcanzar a tu audiencia ideal.',
+    desc: 'Gestionamos campañas pagadas en Meta Ads y Google Ads, optimizadas estratégicamente para que cada peso invertido se traduzca en ventas y alcance a tu audiencia ideal.',
     tags: ['Meta Ads', 'Google Ads', 'Retargeting'],
   },
   {
@@ -41,8 +65,8 @@ const servicios = [
     ),
     color: '#5BC8F5',
     title: 'Diseño Gráfico & Branding',
-    desc: 'Identidad visual que comunica la esencia de tu marca. Desde el logo hasta el manual de marca completo.',
-    tags: ['Logotipos', 'Manual de marca', 'Material gráfico'],
+    desc: 'Diseñamos identidades visuales que comunican la esencia de tu negocio. Desde la creación del logotipo hasta el manual de marca completo.',
+    tags: ['Logotipos', 'Manual de Marca', 'Material Gráfico'],
   },
   {
     icon: (
@@ -53,33 +77,10 @@ const servicios = [
     ),
     color: '#8B3FA8',
     title: 'Producción de Contenido',
-    desc: 'Fotografía, video y contenido audiovisual profesional para redes sociales, publicidad y comunicación corporativa.',
+    desc: 'Producimos fotografía y video profesional para redes sociales, publicidad y comunicación corporativa, captando la atención de tu audiencia.',
     tags: ['Fotografía', 'Video', 'Reels', 'Publicidad'],
   },
-  {
-    icon: (
-      <svg className="icon-multimedios" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <polyline points="16 18 22 12 16 6"></polyline>
-        <polyline points="8 6 2 12 8 18"></polyline>
-      </svg>
-    ),
-    color: '#5BC8F5',
-    title: 'Desarrollo Web',
-    desc: 'Sitios web modernos, rápidos y responsivos que convierten visitas en clientes. Landing pages y portafolios.',
-    tags: ['Landing Pages', 'Portafolios', 'Tiendas online'],
-  },
-  {
-    icon: (
-      <svg className="icon-multimedios" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"></path>
-        <circle cx="12" cy="13" r="3"></circle>
-      </svg>
-    ),
-    color: '#8B3FA8',
-    title: 'Soluciones Digitales',
-    desc: 'No ofrecemos herramientas sueltas, desarrollamos soluciones que funcionan. Creamos ecosistemas digitales pensados para optimizar, escalar y posicionarte. Integramos tecnología, estrategia y experiencia de usuario para que cada desarrollo tenga un impacto real en tu crecimiento.',
-    tags: [],
-  },
+  
 ]
 
 export default function Servicios() {

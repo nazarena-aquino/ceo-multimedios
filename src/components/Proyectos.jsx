@@ -3,6 +3,14 @@ import './Proyectos.css'
 
 const proyectos = [
   {
+    categoria: 'Web',
+    title: 'Sitio Web y pedidos — Ke Bondiola',
+    desc: 'Desarrollo de plataforma de ventas para emprendimiento gastronómico. Permite la configuración de pedidos con selección de modalidad de entrega (retiro o delivery) y automatiza la recepción de órdenes mediante integración con WhatsApp para una gestión inmediata.',
+    link: 'https://kebondiola.vercel.app/',
+    color: '#5BC8F5',
+    year: '2026',
+  },
+  {
     categoria: 'Branding',
     title: 'Identidad Visual — Café Raíz',
     desc: 'Rediseño completo de marca para cafetería artesanal. Logotipo, paleta, tipografía y manual de marca.',
@@ -15,13 +23,6 @@ const proyectos = [
     desc: 'Gestión de redes sociales y campaña de lanzamiento que alcanzó +15K impresiones orgánicas en el primer mes.',
     color: '#8B3FA8',
     year: '2024',
-  },
-  {
-    categoria: 'Web',
-    title: 'Sitio Web — Consultora Nexo',
-    desc: 'Desarrollo de sitio web corporativo con integración de CRM, blog y formularios de captación de leads.',
-    color: '#5BC8F5',
-    year: '2023',
   },
   {
     categoria: 'Publicidad',
@@ -90,6 +91,23 @@ export default function Proyectos() {
               <div className="proyecto-card__body">
                 <h3 className="proyecto-card__title">{p.title}</h3>
                 <p className="proyecto-card__desc">{p.desc}</p>
+                {p.link && (
+                  <a 
+                    href={p.link} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    style={{ 
+                      color: p.color, 
+                      fontSize: '0.9rem', 
+                      fontWeight: 'bold', 
+                      marginTop: '15px', 
+                      display: 'inline-block', 
+                      textDecoration: 'none' 
+                    }}
+                  >
+                    Ver sitio web ↗
+                  </a>
+                )}
               </div>
             </div>
           ))}

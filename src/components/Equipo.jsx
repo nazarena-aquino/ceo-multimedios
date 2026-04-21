@@ -3,36 +3,31 @@ import './Equipo.css'
 
 const equipo = [
   {
-    nombre: 'Valentina Morales',
+    nombre: 'Ana Paula Benitez',
     rol: 'Directora Creativa & Fundadora',
-    bio: 'Diseñadora con más de 7 años en comunicación visual. Apasionada por construir marcas que enamoran.',
+    bio: 'Diseñadora con gran trayectoria en comunicación visual. Enfocada en construir identidades de marca sólidas, memorables y funcionales.',
     color: '#8B3FA8',
-    initials: 'VM',
-    redes: ['instagram', 'linkedin'],
+    initials: 'AB',
+    tags: ['Diseño', 'Branding', 'Estrategia'],
+    linkedin: 'https://www.linkedin.com/in/ana-paula-benitez-00218b362/',
   },
   {
-    nombre: 'Matías González',
-    rol: 'Director de Marketing Digital',
-    bio: 'Especialista en performance marketing y estrategia digital. Meta Ads y Google Ads certificado.',
+    nombre: 'Nazarena Aquino',
+    rol: 'Desarrolladora de Software',
+    bio: 'Especialista en el diseño de soluciones digitales escalables. Orientada a la automatización de procesos y la creación de plataformas eficientes.',
     color: '#5BC8F5',
-    initials: 'MG',
-    redes: ['linkedin', 'twitter'],
+    initials: 'NA',
+    tags: ['Web', 'Mobile', 'Automatización'],
+    linkedin: 'https://www.linkedin.com/in/nazarena-ayelen-aquino-b606a2205/',
   },
   {
-    nombre: 'Camila Torres',
-    rol: 'Content Creator & Copywriter',
-    bio: 'Storyteller de corazón. Crea contenido que conecta marcas con personas de manera auténtica.',
+    nombre: 'Brandon Pzocik',
+    rol: 'Desarrollador Multiplataforma & CM',
+    bio: 'Estratega de comunicación digital. Desarrolla contenido narrativo que conecta marcas con su audiencia de manera auténtica y directa.',
     color: '#8B3FA8',
-    initials: 'CT',
-    redes: ['instagram', 'linkedin'],
-  },
-  {
-    nombre: 'Luciano Reyes',
-    rol: 'Desarrollador Web & UX',
-    bio: 'Transforma ideas en experiencias digitales. Especializado en sitios rápidos, modernos y funcionales.',
-    color: '#5BC8F5',
-    initials: 'LR',
-    redes: ['github', 'linkedin'],
+    initials: 'BP',
+    tags: ['Web / Mobile', 'Social Media', 'Contenido'],
+    linkedin: 'https://www.linkedin.com/in/brandon-pzocik-7a8517232/',
   },
 ]
 
@@ -58,10 +53,32 @@ export default function Equipo() {
                 <span style={{ color: m.color }}>{m.initials}</span>
                 <div className="miembro-card__glow" style={{ background: m.color }}></div>
               </div>
+              
               <div className="miembro-card__info">
-                <h3 className="miembro-card__nombre">{m.nombre}</h3>
-                <p className="miembro-card__rol" style={{ color: m.color }}>{m.rol}</p>
-                <p className="miembro-card__bio">{m.bio}</p>
+                <div className="miembro-card__textos">
+                  <h3 className="miembro-card__nombre">
+                    {m.linkedin ? (
+                      <a 
+                        href={m.linkedin} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="miembro-card__link"
+                      >
+                        {m.nombre} ↗
+                      </a>
+                    ) : (
+                      m.nombre
+                    )}
+                  </h3>
+                  <p className="miembro-card__rol" style={{ color: m.color }}>{m.rol}</p>
+                  <p className="miembro-card__bio">{m.bio}</p>
+                </div>
+
+                <div className="miembro-card__tags">
+                  {m.tags.map((tag, index) => (
+                    <span key={index} className="miembro-tag">{tag}</span>
+                  ))}
+                </div>
               </div>
             </div>
           ))}

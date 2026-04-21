@@ -30,8 +30,10 @@
 
 .equipo__grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, minmax(280px, 340px));
+  justify-content: center; /* Esto centra las 3 tarjetas en el medio de la pantalla */
   gap: 24px;
+  align-items: stretch;
 }
 
 .miembro-card {
@@ -40,6 +42,9 @@
   overflow: hidden;
   border: 1px solid var(--gray-mid);
   transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .miembro-card:hover {
@@ -77,6 +82,14 @@
 
 .miembro-card__info {
   padding: 22px 20px 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.miembro-card__textos {
+  margin-bottom: 1.5rem;
 }
 
 .miembro-card__nombre {
@@ -99,6 +112,32 @@
   font-size: 0.83rem;
   color: var(--text-muted);
   line-height: 1.65;
+}
+
+.miembro-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.miembro-card__link {
+  color: var(--black);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.miembro-card__link:hover {
+  opacity: 0.7;
+}
+
+.miembro-tag {
+  background-color: var(--gray);
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: 1px solid var(--gray-mid);
 }
 
 @media (max-width: 1024px) {
