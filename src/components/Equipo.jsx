@@ -5,10 +5,10 @@ const equipo = [
   {
     nombre: 'Ana Paula Benitez',
     rol: 'Directora Creativa & Fundadora',
-    bio: 'Diseñadora con gran trayectoria en comunicación visual. Enfocada en construir identidades de marca sólidas, memorables y funcionales.',
+    bio: 'Diseñadora con gran trayectoria en comunicación visual. Enfocada en construir identidades de marca sólidas y memorables, integrando estrategias de Social Media para potenciar su presencia digital.',
     color: '#8B3FA8',
     initials: 'AB',
-    tags: ['Diseño', 'Branding', 'Estrategia'],
+    tags: ['Diseño', 'Branding', 'Estrategia', 'Social Media'],
     linkedin: 'https://www.linkedin.com/in/ana-paula-benitez-00218b362/',
   },
   {
@@ -26,7 +26,7 @@ const equipo = [
     bio: 'Desarrollador y estratega digital. Combina la creación de soluciones web y móviles con contenido narrativo que conecta marcas con su audiencia de manera auténtica y directa.',
     color: '#8B3FA8',
     initials: 'BP',
-    tags: ['Web / Mobile', 'Social Media', 'Contenido'],
+    tags: ['Web / Mobile', 'Contenido'],
     linkedin: 'https://www.linkedin.com/in/brandon-pzocik-7a8517232/',
   },
 ]
