@@ -13,7 +13,7 @@ const equipo = [
   },
   {
     nombre: 'Nazarena Aquino',
-    rol: 'Desarrolladora de Software',
+    rol: 'Desarrolladora de Software Multiplataforma',
     bio: 'Especialista en el diseño de soluciones digitales escalables. Orientada a la automatización de procesos y la creación de plataformas eficientes.',
     color: '#5BC8F5',
     initials: 'NA',
@@ -22,8 +22,8 @@ const equipo = [
   },
   {
     nombre: 'Brandon Pzocik',
-    rol: 'Desarrollador Multiplataforma & CM',
-    bio: 'Estratega de comunicación digital. Desarrolla contenido narrativo que conecta marcas con su audiencia de manera auténtica y directa.',
+    rol: 'Desarrollador de Software Multiplataforma & CM',
+    bio: 'Desarrollador y estratega digital. Combina la creación de soluciones web y móviles con contenido narrativo que conecta marcas con su audiencia de manera auténtica y directa.',
     color: '#8B3FA8',
     initials: 'BP',
     tags: ['Web / Mobile', 'Social Media', 'Contenido'],

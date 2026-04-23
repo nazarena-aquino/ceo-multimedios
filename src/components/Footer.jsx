@@ -1,7 +1,7 @@
 import React from 'react'
 import './Footer.css'
 
-const links = ['inicio', 'nosotros', 'servicios', 'proyectos', 'equipo', 'contacto']
+const links = ['inicio', 'nosotros', 'servicios', 'equipo', 'contacto']
 
 export default function Footer() {
   const scrollTo = (id) => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
@@ -13,7 +13,7 @@ export default function Footer() {
         <div className="footer__inner">
           <div className="footer__brand">
             <div className="footer__logo">
-              <img src="/logo-blanco.jpeg" alt="CEO Multimedios" className="footer__logo-img" />
+              <img src="/logo-color.jpeg" alt="CEO Multimedios" className="footer__logo-img" />
               <div>
                 <span className="footer__logo-name">CEO <em>Multimedios</em></span>
                 <span className="footer__logo-sub">Comunicación Empresarial Organizada</span>
@@ -35,8 +35,8 @@ export default function Footer() {
 
           <div className="footer__contacto">
             <span className="footer__nav-title">Contacto</span>
-            <a href="mailto:hola@ceomultimedios.com">hola@ceomultimedios.com</a>
-            <a href="https://wa.me/5493624000000" target="_blank" rel="noopener noreferrer">+54 9 362 400-0000</a>
+            <a href="mailto:ceomultimedios2026@gmail.com">ceomultimedios2026@gmail.com</a>
+            <a href="https://wa.me/5493704774883" target="_blank" rel="noopener noreferrer">+54 9 3704774883</a>
             <span>Formosa, Argentina</span>
           </div>
         </div>
