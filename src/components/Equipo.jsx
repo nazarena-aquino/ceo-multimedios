@@ -64,7 +64,11 @@ export default function Equipo() {
                         rel="noopener noreferrer" 
                         className="miembro-card__link"
                       >
-                        {m.nombre} ↗
+                        {m.nombre}
+<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ marginLeft: '6px', verticalAlign: 'middle', display: 'inline-block' }}>
+  <line x1="7" y1="17" x2="17" y2="7"></line>
+  <polyline points="7 7 17 7 17 17"></polyline>
+</svg>
                       </a>
                     ) : (
                       m.nombre
