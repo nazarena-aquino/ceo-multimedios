@@ -153,8 +153,28 @@
 }
 
 /* Responsive */
+.servicios__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 64px;
+  justify-items: stretch;
+}
+
+.servicio-card:last-child:nth-child(3n + 1) {
+  grid-column: 1 / -1;
+  max-width: calc(33.333% - 16px);
+  justify-self: center;
+}
+
 @media (max-width: 1024px) {
   .servicios__grid { grid-template-columns: repeat(2, 1fr); }
+
+  .servicio-card:last-child:nth-child(3n + 1) {
+    grid-column: auto;
+    max-width: 100%;
+    justify-self: stretch;
+  }
 
   .servicio-card:last-child:nth-child(2n + 1) {
     grid-column: 1 / -1;
@@ -166,25 +186,10 @@
 @media (max-width: 768px) {
   .servicios__grid { grid-template-columns: 1fr; }
 
-  /* Resetear el fix del last-child para mobile */
-  .servicio-card:last-child:nth-child(2n + 1) {
+  .servicio-card:last-child:nth-child(2n + 1),
+  .servicio-card:last-child:nth-child(3n + 1) {
     grid-column: auto;
     max-width: 100%;
     justify-self: stretch;
   }
-}
-
-.servicios__grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  margin-bottom: 64px;
-  justify-items: center; /* centra si no completa la fila */
-}
-
-/* La última tarjeta sola ocupa su columna natural, pero con ancho máximo */
-.servicio-card:last-child:nth-child(3n + 1) {
-  grid-column: 1 / -1;       /* ocupa toda la fila */
-  max-width: calc(33.333% - 16px); /* mantiene el ancho de una columna */
-  justify-self: center;
 }
