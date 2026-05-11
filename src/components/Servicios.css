@@ -153,10 +153,9 @@
 }
 
 /* Responsive */
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   .servicios__grid { grid-template-columns: repeat(2, 1fr); }
 
-  /* 7 tarjetas = 3 filas de 2 + 1 sola al final */
   .servicio-card:last-child:nth-child(2n + 1) {
     grid-column: 1 / -1;
     max-width: calc(50% - 12px);
@@ -164,8 +163,15 @@
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .servicios__grid { grid-template-columns: 1fr; }
+
+  /* Resetear el fix del last-child para mobile */
+  .servicio-card:last-child:nth-child(2n + 1) {
+    grid-column: auto;
+    max-width: 100%;
+    justify-self: stretch;
+  }
 }
 
 .servicios__grid {
