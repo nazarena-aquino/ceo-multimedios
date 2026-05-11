@@ -5,82 +5,94 @@ const servicios = [
   {
     icon: (
       <svg className="icon-multimedios" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <polyline points="16 18 22 12 16 6"></polyline>
-        <polyline points="8 6 2 12 8 18"></polyline>
+        <rect x="2" y="7" width="20" height="15" rx="2" ry="2"></rect>
+        <polyline points="17 2 12 7 7 2"></polyline>
+        <line x1="12" y1="12" x2="12" y2="18"></line>
+        <line x1="9" y1="15" x2="15" y2="15"></line>
       </svg>
     ),
     color: '#5BC8F5',
-    title: 'Desarrollo Web & Mobile',
-    desc: 'Desarrollamos aplicaciones escalables que optimizan procesos y conectan con tus usuarios. Desde sistemas de gestión a medida hasta tiendas online, garantizamos alto rendimiento y una experiencia fluida en cualquier dispositivo para potenciar el crecimiento de tu negocio.',
-    tags: ['Web Apps', 'Portafolios', 'Sistemas a Medida', 'Apps Móviles', 'E-commerce'],
+    title: 'Producción Audiovisual',
+    desc: 'Realizamos producción de contenido audiovisual para campañas, redes sociales, instituciones, eventos y medios digitales. Cada pieza se trabaja con enfoque narrativo, visual y estratégico, adaptada al público y objetivo de cada cliente.',
+    tags: ['Spots Publicitarios', 'Cobertura de Eventos', 'Reels', 'Streaming', 'Videos Institucionales', 'Postproducción'],
   },
   {
     icon: (
       <svg className="icon-multimedios" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"></path>
-        <circle cx="12" cy="13" r="3"></circle>
+        <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
       </svg>
     ),
     color: '#8B3FA8',
-    title: 'Soluciones Digitales',
-    desc: 'No ofrecemos herramientas sueltas, desarrollamos soluciones que funcionan. Creamos ecosistemas digitales pensados para optimizar, escalar y posicionarte. Integramos tecnología, estrategia y experiencia de usuario para que cada desarrollo tenga un impacto real en tu crecimiento.',
-    tags: ['Estrategia Digital', 'Automatización', 'UX / UI', 'Integraciones', 'Consultoría'],
+    title: 'Gestión de Redes Sociales',
+    desc: 'Diseñamos estrategias de comunicación digital orientadas al crecimiento y posicionamiento de marcas en redes sociales. Buscamos construir presencia digital sólida, coherente y auténtica.',
+    tags: ['Planificación de Contenido', 'Diseño Gráfico', 'Redacción', 'Producción Audiovisual', 'Cobertura en Vivo', 'Interacción y Alcance'],
   },
   {
     icon: (
       <svg className="icon-multimedios" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
-        <line x1="12" y1="18" x2="12.01" y2="18"></line>
-        <path d="M12 2v2"></path>
+        <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+        <path d="M3 9h18"></path>
+        <path d="M9 21V9"></path>
       </svg>
     ),
     color: '#5BC8F5',
-    title: 'Social Media Management & Copywriting | Comunicación',
-    desc: 'Gestión integral de redes sociales con enfoque estratégico, creación de contenido y análisis de métricas orientadas a resultados. Desarrollamos textos persuasivos que conectan con tu audiencia y fortalecen tu marca. Aplicamos storytelling estratégico para comunicar, generar impacto y construir posicionamiento.',
-    tags: ['Instagram', 'Facebook', 'LinkedIn', 'TikTok', 'Copy', 'Storytelling', 'Email marketing'],
+    title: 'Desarrollo Web y Plataformas Digitales',
+    desc: 'Creamos sitios web modernos, funcionales y adaptados a las necesidades de cada proyecto. Priorizamos diseño, velocidad, experiencia de usuario y adaptabilidad móvil.',
+    tags: ['Sitios Institucionales', 'Portales Informativos', 'Landing Pages', 'Plataformas Multimedia', 'Integraciones Digitales'],
   },
   {
     icon: (
       <svg className="icon-multimedios" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M11 20A1 1 0 0 1 10 21H6A1 1 0 0 1 5 20V16L9 12V6A1 1 0 0 1 10 5H18A1 1 0 0 1 19 6V11L15 15V19A1 1 0 0 1 14 20H11Z"></path>
-        <path d="M19 6L21 4"></path>
-        <path d="M21 11L23 13"></path>
-        <path d="M18 1L21 2"></path>
+        <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+        <path d="M2 17l10 5 10-5"></path>
+        <path d="M2 12l10 5 10-5"></path>
       </svg>
     ),
     color: '#8B3FA8',
-    title: 'Publicidad Digital',
-    desc: 'Gestionamos campañas pagadas en Meta Ads y Google Ads, optimizadas estratégicamente para que cada peso invertido se traduzca en ventas y alcance a tu audiencia ideal.',
-    tags: ['Meta Ads', 'Google Ads', 'Retargeting'],
+    title: 'Branding e Identidad Visual',
+    desc: 'Construimos identidades visuales que representan la esencia y personalidad de cada marca. Buscamos generar marcas reconocibles, profesionales y con identidad propia.',
+    tags: ['Logotipos', 'Manuales de Marca', 'Paletas Visuales', 'Identidad para Redes', 'Aplicaciones Gráficas'],
   },
   {
     icon: (
       <svg className="icon-multimedios" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="13.5" cy="6.5" r=".5" fill="currentColor"></circle>
-        <circle cx="17.5" cy="10.5" r=".5" fill="currentColor"></circle>
-        <circle cx="8.5" cy="7.5" r=".5" fill="currentColor"></circle>
-        <circle cx="6.5" cy="12.5" r=".5" fill="currentColor"></circle>
-        <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"></path>
+        <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+        <polyline points="17 6 23 6 23 12"></polyline>
       </svg>
     ),
     color: '#5BC8F5',
-    title: 'Diseño Gráfico & Branding',
-    desc: 'Diseñamos identidades visuales que comunican la esencia de tu negocio. Desde la creación del logotipo hasta el manual de marca completo.',
-    tags: ['Logotipos', 'Manual de Marca', 'Material Gráfico'],
+    title: 'Publicidad y Campañas',
+    desc: 'Desarrollamos campañas de comunicación pensadas para generar impacto y visibilidad. Cada campaña se diseña en función de objetivos concretos y públicos específicos.',
+    tags: ['Campañas Institucionales', 'Promoción de Productos', 'Contenido Publicitario', 'Estrategias Multimedia', 'Adaptación Multiplataforma'],
   },
   {
     icon: (
       <svg className="icon-multimedios" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"></path>
-        <circle cx="12" cy="13" r="3"></circle>
+        <circle cx="12" cy="12" r="10"></circle>
+        <line x1="2" y1="12" x2="22" y2="12"></line>
+        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
       </svg>
     ),
     color: '#8B3FA8',
-    title: 'Producción de Contenido',
-    desc: 'Producimos fotografía y video profesional para redes sociales, publicidad y comunicación corporativa, captando la atención de tu audiencia.',
-    tags: ['Fotografía', 'Video', 'Reels', 'Publicidad'],
+    title: 'Cobertura Periodística y Prensa',
+    desc: 'Brindamos cobertura profesional para eventos, actividades institucionales y acciones de comunicación. Integramos comunicación, información y producción en tiempo real.',
+    tags: ['Cobertura Audiovisual', 'Fotografía', 'Redacción Periodística', 'Difusión Digital', 'Entrevistas y Notas'],
   },
-  
+  {
+    icon: (
+      <svg className="icon-multimedios" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="12" cy="12" r="3"></circle>
+        <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+        <path d="M4.93 4.93a10 10 0 0 0 0 14.14"></path>
+        <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+        <path d="M8.46 8.46a5 5 0 0 0 0 7.07"></path>
+      </svg>
+    ),
+    color: '#5BC8F5',
+    title: 'Comunicación Estratégica',
+    desc: 'Acompañamos proyectos en el diseño de estrategias comunicacionales integrales. Trabajamos la comunicación como una herramienta de construcción, diferenciación y valor.',
+    tags: ['Identidad y Posicionamiento', 'Públicos Objetivos', 'Narrativa Institucional', 'Presencia Digital', 'Estrategias de Crecimiento'],
+  },
 ]
 
 export default function Servicios() {
@@ -94,7 +106,7 @@ export default function Servicios() {
             Servicios diseñados para <span>hacer crecer tu negocio</span>
           </h2>
           <p className="servicios__sub">
-          Integramos estrategia, contenido y tecnología para generar posicionamiento, optimizar procesos y lograr resultados concretos.
+            Integramos estrategia, contenido y tecnología para generar posicionamiento, optimizar procesos y lograr resultados concretos.
           </p>
         </div>
 
