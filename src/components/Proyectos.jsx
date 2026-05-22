@@ -1,88 +1,49 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './Proyectos.css'
 
 const proyectos = [
   {
-    categoria: 'Web',
-    title: 'Sitio Web y pedidos — Ke Bondiola',
-    desc: 'Desarrollo de plataforma de ventas para emprendimiento gastronómico. Permite la configuración de pedidos con selección de modalidad de entrega (retiro o delivery) y automatiza la recepción de órdenes mediante integración con WhatsApp para una gestión inmediata.',
+    categoria: 'Aplicación Web',
+    title: 'Aplicación para KeBondiola',
+    desc: 'Plataforma de ventas con flujo simple para pedidos y experiencia optimizada.',
     link: 'https://kebondiola.vercel.app/',
     color: '#5BC8F5',
-    year: '2026',
   },
   {
-    categoria: 'Branding',
-    title: 'Identidad Visual — Café Raíz',
-    desc: 'Rediseño completo de marca para cafetería artesanal. Logotipo, paleta, tipografía y manual de marca.',
+    categoria: 'Aplicación Web',
+    title: 'Aplicación para KePastelito',
+    desc: 'Plataforma de ventas con flujo simple para pedidos y experiencia optimizada.',
+    link: 'https://kepastelito.vercel.app/',
+    color: '#8B3FA8',
+  },
+  {
+    categoria: 'Aplicación Web',
+    title: 'Aplicación para CEO FM Radio Online',
+    desc: 'Radio online con acceso directo para escuchar en vivo.',
+    link: 'https://radio-online-ceo.vercel.app/',
     color: '#5BC8F5',
-    year: '2024',
-  },
-  {
-    categoria: 'Social Media',
-    title: 'Campaña Digital — Estudio Forma',
-    desc: 'Gestión de redes sociales y campaña de lanzamiento que alcanzó +15K impresiones orgánicas en el primer mes.',
-    color: '#8B3FA8',
-    year: '2024',
-  },
-  {
-    categoria: 'Publicidad',
-    title: 'Meta Ads — Tienda Aura',
-    desc: 'Campaña de performance en Instagram y Facebook con ROI del 320% en temporada de ventas navideñas.',
-    color: '#8B3FA8',
-    year: '2023',
-  },
-  {
-    categoria: 'Contenido',
-    title: 'Producción — Gym Titan',
-    desc: 'Pack mensual de fotografía y video para redes sociales. Estética coherente que triplicó el engagement.',
-    color: '#5BC8F5',
-    year: '2024',
-  },
-  {
-    categoria: 'Branding',
-    title: 'Marca Personal — Coach Valentina',
-    desc: 'Construcción de marca personal completa: identidad, estrategia de contenido y presencia digital.',
-    color: '#8B3FA8',
-    year: '2024',
   },
 ]
 
-const categorias = ['Todos', 'Branding', 'Social Media', 'Web', 'Publicidad', 'Contenido']
-
 export default function Proyectos() {
-  const [filtro, setFiltro] = useState('Todos')
-
-  const filtrados = filtro === 'Todos' ? proyectos : proyectos.filter(p => p.categoria === filtro)
-
   return (
     <section id="proyectos" className="proyectos">
       <div className="container">
         <div className="proyectos__header">
           <p className="section-label">Nuestro trabajo</p>
           <h2 className="section-title">
-            Proyectos que<br />
-            <span>hablan por sí solos</span>
+            Proyectos de <span>desarrollo de aplicaciones</span>
           </h2>
-        </div>
 
-        <div className="proyectos__filtros">
-          {categorias.map(c => (
-            <button
-              key={c}
-              className={`filtro-btn ${filtro === c ? 'filtro-btn--active' : ''}`}
-              onClick={() => setFiltro(c)}
-            >
-              {c}
-            </button>
-          ))}
+
+
         </div>
 
         <div className="proyectos__grid">
-          {filtrados.map((p, i) => (
+          {proyectos.map((p, i) => (
             <div className="proyecto-card" key={p.title + i}>
               <div className="proyecto-card__header" style={{ background: `linear-gradient(135deg, ${p.color}22, ${p.color}44)` }}>
                 <span className="proyecto-card__cat" style={{ color: p.color }}>{p.categoria}</span>
-                <span className="proyecto-card__year">{p.year}</span>
                 <div className="proyecto-card__visual" aria-hidden="true">
                   <div className="pv-circle pv-circle--1" style={{ background: p.color }}></div>
                   <div className="pv-circle pv-circle--2" style={{ background: p.color }}></div>
@@ -92,20 +53,20 @@ export default function Proyectos() {
                 <h3 className="proyecto-card__title">{p.title}</h3>
                 <p className="proyecto-card__desc">{p.desc}</p>
                 {p.link && (
-                  <a 
-                    href={p.link} 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    style={{ 
-                      color: p.color, 
-                      fontSize: '0.9rem', 
-                      fontWeight: 'bold', 
-                      marginTop: '15px', 
-                      display: 'inline-block', 
-                      textDecoration: 'none' 
+                  <a
+                    href={p.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      color: p.color,
+                      fontSize: '0.9rem',
+                      fontWeight: 'bold',
+                      marginTop: '15px',
+                      display: 'inline-block',
+                      textDecoration: 'none',
                     }}
                   >
-                    Ver sitio web ↗
+                    Ver app real ↗
                   </a>
                 )}
               </div>
@@ -116,3 +77,4 @@ export default function Proyectos() {
     </section>
   )
 }
+

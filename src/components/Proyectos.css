@@ -9,38 +9,7 @@
   margin: 0 auto 40px;
 }
 
-.proyectos__filtros {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
-  margin-bottom: 48px;
-}
 
-.filtro-btn {
-  padding: 9px 20px;
-  border-radius: 50px;
-  border: 1.5px solid var(--gray-mid);
-  background: transparent;
-  font-family: var(--font-body);
-  font-size: 13px;
-  font-weight: 500;
-  color: var(--text-muted);
-  cursor: pointer;
-  transition: all 0.2s;
-}
-
-.filtro-btn:hover {
-  border-color: var(--purple);
-  color: var(--purple);
-}
-
-.filtro-btn--active {
-  background: var(--purple);
-  border-color: var(--purple);
-  color: white;
-  box-shadow: 0 4px 14px rgba(139,63,168,0.3);
-}
 
 .proyectos__grid {
   display: grid;

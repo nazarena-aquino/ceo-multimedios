@@ -16,7 +16,8 @@ export default function App() {
         <Hero />
         <Nosotros/>
         <Servicios />
-        
+        <Proyectos />
+
         <Equipo />
         <Contacto />
       </main>
@@ -24,3 +25,4 @@ export default function App() {
     </>
   )
 }
+
