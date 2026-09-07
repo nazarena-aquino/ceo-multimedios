@@ -4,13 +4,6 @@ import './Proyectos.css'
 const proyectos = [
   {
     categoria: 'Aplicación Web',
-    title: 'Aplicación para KeBondiola',
-    desc: 'Plataforma de ventas con flujo simple para pedidos y experiencia optimizada.',
-    link: 'https://kebondiola.vercel.app/',
-    color: '#5BC8F5',
-  },
-  {
-    categoria: 'Aplicación Web',
     title: 'Aplicación para KePastelito',
     desc: 'Plataforma de ventas con flujo simple para pedidos y experiencia optimizada.',
     link: 'https://kepastelito.vercel.app/',
@@ -23,6 +16,22 @@ const proyectos = [
     link: 'https://radio-online-ceo.vercel.app/',
     color: '#5BC8F5',
   },
+  {
+    categoria: 'Aplicación Web',
+    title: 'Aplicación web para Antonica',
+    desc: 'Solución web a medida para Antonica, con interfaz moderna y funcionalidades adaptadas al negocio.',
+    link: 'https://www.antonicamusica.com/',
+    
+    color: '#8B3FA8',
+  },
+  {
+    categoria: 'Marketing & Redes',
+    title: 'Marketing y Gestión de Redes Sociales',
+    desc: 'Estrategia, producción de contenido y gestión integral de redes sociales para potenciar la presencia digital de nuestros clientes.',
+    linkInstagram: 'https://www.instagram.com/antonica_oficial/',
+    linkTiktok: 'https://www.tiktok.com/@antonica_oficial',
+    color: '#5BC8F5',
+  },
 ]
 
 export default function Proyectos() {
@@ -32,11 +41,8 @@ export default function Proyectos() {
         <div className="proyectos__header">
           <p className="section-label">Nuestro trabajo</p>
           <h2 className="section-title">
-            Proyectos de <span>desarrollo de aplicaciones</span>
+            Proyectos que <span>hablan por sí solos</span>
           </h2>
-
-
-
         </div>
 
         <div className="proyectos__grid">
@@ -52,23 +58,41 @@ export default function Proyectos() {
               <div className="proyecto-card__body">
                 <h3 className="proyecto-card__title">{p.title}</h3>
                 <p className="proyecto-card__desc">{p.desc}</p>
-                {p.link && (
-                  <a
-                    href={p.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style={{
-                      color: p.color,
-                      fontSize: '0.9rem',
-                      fontWeight: 'bold',
-                      marginTop: '15px',
-                      display: 'inline-block',
-                      textDecoration: 'none',
-                    }}
-                  >
-                    Ver app real ↗
-                  </a>
-                )}
+                <div className="proyecto-card__links">
+                  {p.link && (
+                    <a
+                      href={p.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{ color: p.color }}
+                      className="proyecto-link"
+                    >
+                      Ver web real ↗
+                    </a>
+                  )}
+                  {p.linkInstagram && (
+                    <a
+                      href={p.linkInstagram}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{ color: p.color }}
+                      className="proyecto-link"
+                    >
+                      Ver Instagram ↗
+                    </a>
+                  )}
+                  {p.linkTiktok && (
+                    <a
+                      href={p.linkTiktok}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{ color: p.color }}
+                      className="proyecto-link"
+                    >
+                      Ver TikTok ↗
+                    </a>
+                  )}
+                </div>
               </div>
             </div>
           ))}
@@ -77,4 +101,3 @@ export default function Proyectos() {
     </section>
   )
 }
-
