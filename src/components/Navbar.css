@@ -73,7 +73,7 @@
   transform-origin: center;
 }
 
-/* Animación al abrir */
+/* Animación hamburguesa → X */
 .navbar__hamburger span.open:nth-child(1) {
   transform: translateY(7px) rotate(45deg);
 }
@@ -85,58 +85,87 @@
   transform: translateY(-7px) rotate(-45deg);
 }
 
-/* Responsive */
+/* ── MOBILE ── */
 @media (max-width: 768px) {
   .navbar__hamburger { display: flex; }
 
+  /* El menú siempre está en el DOM pero oculto con visibility+opacity+max-height */
   .navbar__links {
-    display: none;
     position: absolute;
     top: var(--nav-h);
-    left: 0; right: 0;
+    left: 0;
+    right: 0;
     flex-direction: column;
     background: white;
-    padding: 16px;
+    padding: 8px 16px;
     box-shadow: 0 8px 24px rgba(0,0,0,0.1);
     gap: 2px;
-    /* Animación de apertura */
+
+    /* Estado cerrado */
+    max-height: 0;
+    overflow: hidden;
     opacity: 0;
-    transform: translateY(-8px);
+    visibility: hidden;
     pointer-events: none;
-    transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+    transform: translateY(-6px);
+
+    /* Transición de cierre */
+    transition:
+      max-height 0.35s cubic-bezier(0.23, 1, 0.32, 1),
+      opacity 0.25s ease,
+      transform 0.3s cubic-bezier(0.23, 1, 0.32, 1),
+      visibility 0s linear 0.35s;
   }
 
+  /* Estado abierto */
   .navbar__links--open {
-    display: flex;
+    max-height: 400px;
     opacity: 1;
-    transform: translateY(0);
+    visibility: visible;
     pointer-events: auto;
+    transform: translateY(0);
+
+    /* Transición de apertura — visibility sin delay */
+    transition:
+      max-height 0.35s cubic-bezier(0.23, 1, 0.32, 1),
+      opacity 0.25s ease,
+      transform 0.3s cubic-bezier(0.23, 1, 0.32, 1),
+      visibility 0s linear 0s;
   }
 
   .navbar--scrolled .navbar__links--open {
     background: rgba(255,255,255,0.98);
   }
 
-  .navbar__links button {
-    width: 100%;
-    text-align: left;
-    padding: 12px 16px;
-    /* Animación en cascada de los items */
+  /* Items: animación en cascada al abrir */
+  .navbar__links li {
     opacity: 0;
-    transform: translateX(-10px);
-    transition: opacity 0.25s ease, transform 0.25s ease, color 0.2s, background 0.2s;
+    transform: translateX(-12px);
+    transition: opacity 0.25s ease, transform 0.25s cubic-bezier(0.23, 1, 0.32, 1);
   }
 
-  .navbar__links--open button {
+  .navbar__links--open li {
     opacity: 1;
     transform: translateX(0);
   }
 
-  /* Cascada de aparición por item */
-  .navbar__links--open li:nth-child(1) button { transition-delay: 0.04s; }
-  .navbar__links--open li:nth-child(2) button { transition-delay: 0.08s; }
-  .navbar__links--open li:nth-child(3) button { transition-delay: 0.12s; }
-  .navbar__links--open li:nth-child(4) button { transition-delay: 0.16s; }
-  .navbar__links--open li:nth-child(5) button { transition-delay: 0.20s; }
-  .navbar__links--open li:nth-child(6) button { transition-delay: 0.24s; }
+  /* Delays escalonados al abrir */
+  .navbar__links--open li:nth-child(1) { transition-delay: 0.05s; }
+  .navbar__links--open li:nth-child(2) { transition-delay: 0.10s; }
+  .navbar__links--open li:nth-child(3) { transition-delay: 0.15s; }
+  .navbar__links--open li:nth-child(4) { transition-delay: 0.20s; }
+  .navbar__links--open li:nth-child(5) { transition-delay: 0.25s; }
+  .navbar__links--open li:nth-child(6) { transition-delay: 0.30s; }
+
+  /* Al cerrar: sin delay para que desaparezcan rápido junto con el menú */
+  .navbar__links li {
+    transition-delay: 0s;
+  }
+
+  .navbar__links button {
+    width: 100%;
+    text-align: left;
+    padding: 12px 16px;
+    transition: color 0.2s, background 0.2s;
+  }
 }
