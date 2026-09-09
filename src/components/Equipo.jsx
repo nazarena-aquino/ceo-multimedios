@@ -20,15 +20,6 @@ const equipo = [
     tags: ['Web', 'Mobile', 'Automatización'],
     linkedin: 'https://www.linkedin.com/in/nazarena-ayelen-aquino-b606a2205/',
   },
-  {
-    nombre: 'Brandon Pzocik',
-    rol: 'Desarrollador de Software Multiplataforma & CM',
-    bio: 'Desarrollador y estratega digital. Combina la creación de soluciones web y móviles con contenido narrativo que conecta marcas con su audiencia de manera auténtica y directa.',
-    color: '#8B3FA8',
-    initials: 'BP',
-    tags: ['Web', 'Mobile', 'Contenido'],
-    linkedin: 'https://www.linkedin.com/in/brandon-pzocik-7a8517232/',
-  },
 ]
 
 export default function Equipo() {
